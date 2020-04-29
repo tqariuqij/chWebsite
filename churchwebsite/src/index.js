@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import StartBar from './StartBar'
+import Cardlist from './Cardlist'
 import * as serviceWorker from './serviceWorker';
+import 'tachyons';
+import Startbar from './StartBar';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <Startbar/>
+     <Cardlist />
   </React.StrictMode>,
   document.getElementById('root')
 );
