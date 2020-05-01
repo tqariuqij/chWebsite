@@ -7,17 +7,17 @@ const toolbar = props => {
         <header className='flex flex-wrap items-center h3 w-100 bg-navy'>
             <nav className='flex'>
                 <div>Church of Jesus Christ</div>
-                <div>
-                    <ul className='list pl0 flex flex-wrap  pa0 pl7 ma0 none white'>
-                        <li>Preachings</li>
-                        <li>Songs</li>
-                        <li>Testimonies</li>
-                        <li>Events</li>
+                <div className= 'toolbarList'>
+                    <ul className=' list pl0 flex flex-wrap  pa0 pl7 ma0 none white'>
+                        <li className= 'pa1'>Preachings</li>
+                        <li className= 'pa1'>Songs</li>
+                        <li className= 'pa1'>Testimonies</li>
+                        <li className= 'pa1'>Events</li>
                         <li></li>
                     </ul>
                 </div>
-                <div>
-                    <DrawerToggleButton/>
+                <div className="toolbar__toggle-button">
+                    <DrawerToggleButton click={props.drawerClickHandler} />
                 </div>
             </nav>
         </header>
