@@ -4,21 +4,23 @@ import './Toolbar.css'
 
 const toolbar = props => {
     return (
-        <header className='flex flex-wrap items-center h3 w-100 bg-navy'>
+        <header className='flex flex wrap h4 w-100 bg-navy dib shadow-5'>
             <nav className='flex'>
-                <div>Church of Jesus Christ</div>
+           
+                <div className='red pr5'><h1>Church of Jesus Christ</h1></div>
                 <div className= 'toolbarList'>
-                    <ul className=' list pl0 flex flex-wrap  pa0 pl7 ma0 none white'>
-                        <li className= 'pa1'>Preachings</li>
-                        <li className= 'pa1'>Songs</li>
-                        <li className= 'pa1'>Testimonies</li>
-                        <li className= 'pa1'>Events</li>
+                    <ul className=' list  flex  pa0 pv4 pl7 ma0 none white'>
+                        <li><a className="f6 f5-l white bg-animate black-80 hover-bg-lightest-blue dib pa3 " href="/">Preachings</a></li>
+                        <li><a className="f6 f5-l white bg-animate black-80 hover-bg-light-green dib pa3 " href="/">Songs</a></li>
+                        <li><a className="f6 f5-l white bg-animate black-80 hover-bg-light-blue dib pa3 " href="/">Testimonies</a></li>
+                        <li><a className="f6 f5-l white bg-animate black-80 hover-bg-light-pink dib pa3 " href="/">Events</a></li>
                         <li></li>
                     </ul>
                 </div>
-                <div className="toolbar__toggle-button">
+                <div className="pl3 pv4">
                     <DrawerToggleButton click={props.drawerClickHandler} />
                 </div>
+                
             </nav>
         </header>
 

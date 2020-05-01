@@ -1,39 +1,41 @@
-import React, { Component } from 'react'
-
-import Toolbar from './components/Toolbar/Toolbar/Toolbar'
-import SideDrawer from './components/Toolbar/SideDrawer/SideDrawer'
-import Backdrop from './components/BackDrop/BackDrop'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from './Pages/Home';
+import { PreachingsAudio } from './Pages/Preachings/PreachingsAudio';
+import { PreachingsVideo } from './Pages/Preachings/PreachingsVideos';
+import { PreachingsWritten } from './Pages/Preachings/PreachingsWritten';
+import { SongsAudio } from './Pages/Songs/AudioSongs';
+import { SongsVideo } from './Pages/Songs/VideoSongs';
+import { TestimoniesWritten } from './Pages/Testimonies/WrittenTestimonies';
+import { TestimoniesAudio } from './Pages/Testimonies/AudioTestimonies';
+import { TestimoniesVideo } from './Pages/Testimonies/VideoTestimonies';
+import { Events } from './Pages/Events/Events';
+// import { NoMatch } from './NoMatch';
+// import { Layout } from './components/Layout';
+ import { Toolbar } from './components/Toolbar/Toolbar/Toolbar';
+// import { Jumbotron } from './components/Jumbotron';
 
 class App extends Component {
-  state = {
-    sideDrawerOpen: false,
-  }
-
-  drawerToggleClickHandler = () => {
-    this.setState(prevState => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen }
-    })
-  }
-
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false })
-  }
-
   render() {
-    let backdrop;
-
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
     return (
-      <div style={{height: '100%'}}>
-        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {backdrop}
-        ...
-      </div>
+      <React.Fragment>
+        <Router>
+          <Toolbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/'./Pages/Preachings/PreachingsAudio';" component={PreachingsAudio} />
+              <Route path="'./Pages/Preachings/PreachingsVideos'" component={PreachingsVideo} />
+              <Route path="/Pages/Preachings/PreachingsWritten" component={PreachingsWritten} />
+              <Route path="/Pages/Songs/VideoSongs" component={SongsVideo} />
+            <Route path="/Pages/Songs/AudioSongs" Component={ SongsAudio } />
+              <Route path="/Pages/Testimonies/WrittenTestimonies" component={TestimoniesWritten} />
+              <Route path="/Pages/Testimonies/AudioTestimonies" component={TestimoniesAudio} />
+              <Route path="/Pages/Testimonies/VideoTestimonies" component={TestimoniesVideo} />
+              <Route path="/Pages/Events/Events" component={Events} />
+            </Switch>
+        </Router>
+      </React.Fragment>
     );
   }
 }
-
-export default App
+export default App;
