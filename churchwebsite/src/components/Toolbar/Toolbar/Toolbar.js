@@ -2,7 +2,7 @@ import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton.js'
 import './Toolbar.css'
 
-const toolbar = props => {
+const Toolbar = props => {
     return (
         <header className='flex flex wrap h4 w-100 bg-navy dib shadow-5'>
             <nav className='flex'>
@@ -26,4 +26,4 @@ const toolbar = props => {
 
     );
 }
-export default toolbar;
+export default Toolbar;

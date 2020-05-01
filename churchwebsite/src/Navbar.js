@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import Toolbar from './components/Toolbar/Toolbar/Toolbar'
 import SideDrawer from './components/Toolbar/SideDrawer/SideDrawer'
 import Backdrop from './components/BackDrop/BackDrop'
@@ -36,4 +35,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+export default Navbar;

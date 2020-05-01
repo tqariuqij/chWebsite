@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { Navbar } from './Navbar.js';
 import { Home } from './Pages/Home';
 import { PreachingsAudio } from './Pages/Preachings/PreachingsAudio';
 import { PreachingsVideo } from './Pages/Preachings/PreachingsVideos';
@@ -10,9 +11,10 @@ import { TestimoniesWritten } from './Pages/Testimonies/WrittenTestimonies';
 import { TestimoniesAudio } from './Pages/Testimonies/AudioTestimonies';
 import { TestimoniesVideo } from './Pages/Testimonies/VideoTestimonies';
 import { Events } from './Pages/Events/Events';
+// import { Foot } from '/components/footer/Foot';
 // import { NoMatch } from './NoMatch';
 // import { Layout } from './components/Layout';
- import { Toolbar } from './components/Toolbar/Toolbar/Toolbar';
+//  import { Navbar } from './Navbar';
 // import { Jumbotron } from './components/Jumbotron';
 
 class App extends Component {
@@ -20,14 +22,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Router>
-          <Toolbar />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/'./Pages/Preachings/PreachingsAudio';" component={PreachingsAudio} />
               <Route path="'./Pages/Preachings/PreachingsVideos'" component={PreachingsVideo} />
               <Route path="/Pages/Preachings/PreachingsWritten" component={PreachingsWritten} />
               <Route path="/Pages/Songs/VideoSongs" component={SongsVideo} />
-            <Route path="/Pages/Songs/AudioSongs" Component={ SongsAudio } />
+              <Route path="/Pages/Songs/AudioSongs" Component={ SongsAudio } />
               <Route path="/Pages/Testimonies/WrittenTestimonies" component={TestimoniesWritten} />
               <Route path="/Pages/Testimonies/AudioTestimonies" component={TestimoniesAudio} />
               <Route path="/Pages/Testimonies/VideoTestimonies" component={TestimoniesVideo} />

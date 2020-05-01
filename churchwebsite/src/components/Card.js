@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './mulot2.jpg'
+import logo from '../mulot2.jpg'
 
 const Card = () => {
     return(
