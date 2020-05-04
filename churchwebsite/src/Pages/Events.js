@@ -3,15 +3,13 @@ import Cardlist from '../components/Cardlist';
 import Scroll from '../components/Scroll/Scroll';
 import Navbar from '../components/Navbar/Navbar';
 import Foot from '../components/footer/Foot'
-import JumboTron from '../components/JumboTron/JumboTron'
 
-export const Home = () => (
+export const Events = () => (
         <div>
                 <Navbar/>
-                <JumboTron/>
-                       <Scroll>
+                <Scroll>
                         <Cardlist />
-                       </Scroll> 
+                </Scroll>
                 <Foot />
         </div>
 )

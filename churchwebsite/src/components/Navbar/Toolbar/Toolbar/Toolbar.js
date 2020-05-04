@@ -4,7 +4,7 @@ import './Toolbar.css'
 
 const Toolbar = props => {
     return (
-        <header className='flex flex wrap h4 w-100 bg-navy dib shadow-5'>
+        <header className='flex flex wrap h4 w-100 bg-black dib shadow-5'>
             <nav className='flex'>
            
                 <div className='red pr5'><h1>Church of Jesus Christ</h1></div>

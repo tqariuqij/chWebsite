@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'YellowSubmarine Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('YellowSubmarine Regular'), url('beatles.woff') format('woff');
+  }
+.list  {
+  font-family: 'YellowSubmarine Regular';
+
+}
+
 .side-drawer {
     height: 100%;
     background: white;
